@@ -1,0 +1,22 @@
+@use "../abstracts/mixins";
+main {
+  padding: 40px 100px;
+  @include mixins.lg {
+    padding: 40px 50px;
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 15px;
+  @include mixins.xl {
+    grid-template-columns: auto auto auto;
+  }
+  @include mixins.lg {
+    grid-template-columns: auto auto;
+  }
+  @include mixins.md {
+    grid-template-columns: auto;
+  }
+}

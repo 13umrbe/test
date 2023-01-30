@@ -1,0 +1,11 @@
+@use "../abstracts/colors";
+.card {
+  border: 1px solid colors.$secondary;
+  border-radius: 12px;
+  &__img {
+    width: 100%;
+  }
+  &__body {
+    padding: 20px;
+  }
+}

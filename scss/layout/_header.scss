@@ -1,0 +1,53 @@
+@use "../abstracts/mixins";
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px;
+  border-bottom: 1px solid gray;
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .avatar {
+    width: 30px;
+  }
+  .content {
+    display: flex;
+    align-items: center;
+  }
+  &__title {
+    margin-right: 10px;
+  }
+  .nav__item {
+    color: black;
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  &__btn {
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+  .burger {
+    display: none;
+  }
+  @include mixins.lg {
+    .nav {
+      display: none;
+    }
+    .burger {
+      display: inline-block;
+      margin-left: 15px;
+    }
+  }
+  @include mixins.md {
+    &__btn {
+      display: none;
+    }
+  }
+}
